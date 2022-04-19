@@ -1,9 +1,16 @@
 module.exports = {
     content: [
-        "./src/**/*.{js,ts,jsx,tsx}"
+        "./pages/**/*.{js,ts,jsx,tsx}",
+        "./components/**/*.{js,ts,jsx,tsx}"
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                bluePrimary: "#007AFF",
+                blackPrimary: "#2A3039",
+                blackPrimary2: "#2A303980"
+            }
+        },
     },
     plugins: [],
 }
