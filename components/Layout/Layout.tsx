@@ -4,7 +4,7 @@ import Nav from './Nav'
 
 const Layout: FC<{ children: any }> = ({ children }) => {
     return (
-        <div>
+        <div className='z-0'>
             <Nav />
             {children}
             <Footer />
