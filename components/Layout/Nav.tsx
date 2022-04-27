@@ -7,7 +7,7 @@ import { CgMenuRight, CgClose } from 'react-icons/cg'
 
 const Nav = () => {
     return (
-        <div className='max-w-6xl bg-white mx-auto px-4 2xl:max-w-7xl flex items-center justify-between xl:justify-start py-4 sm:py-6 relative z-50'>
+        <div className='max-w-6xl bg-white mx-auto px-4 2xl:max-w-7xl flex items-center justify-between xl:justify-start py-4 sm:py-6 relative z-50 shadow-sm'>
             <Link href="/" passHref>
                 <a className='flex items-end justify-start'>
                     <h1 className='text-blackPrimary text-2xl sm:text-3xl font-extrabold'>Younggeks</h1>
@@ -36,16 +36,16 @@ const Nav = () => {
                             <Menu.Items className='absolute left-0 top-full z-50 w-full px-4 border-y py-6 space-y-4 bg-white'>
                                 <div className="flex flex-col space-y-8 w-full">
                                     <div className='space-y-8'>
-                                        {topNav.map(nav => (
+                                        {topNav.map((nav, index) => (
                                             <>
                                                 {nav.link ? (
-                                                    <Link href={`${nav.href}`} passHref>
+                                                    <Link key={index} href={`${nav.href}`} passHref>
                                                         <a className='flex text-blackPrimary items-end justify-start'>
                                                             {nav.name}
                                                         </a>
                                                     </Link>
                                                 ) : (
-                                                    <Menu as='div' className='relative'>
+                                                    <Menu key={index} as='div' className='relative'>
                                                         {({ open }) => (
                                                             <>
                                                                 <Menu.Button className="text-blackPrimary flex items-center justify-between w-full space-x-2">
@@ -97,16 +97,16 @@ const Nav = () => {
                 )}
             </Menu>
             <div className='hidden lg:flex space-x-6 xl:ml-20 xl:mr-auto'>
-                {topNav.map(nav => (
+                {topNav.map((nav, index) => (
                     <>
                         {nav.link ? (
-                            <Link href={`${nav.href}`} passHref>
+                            <Link key={index} href={`${nav.href}`} passHref>
                                 <a className='flex text-blackPrimary3 items-end justify-start'>
                                     {nav.name}
                                 </a>
                             </Link>
                         ) : (
-                            <Menu as='div' className='relative'>
+                            <Menu key={index} as='div' className='relative'>
                                 {({ open }) => (
                                     <>
                                         <Menu.Button className="text-blackPrimary3 flex items-center space-x-2">
