@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "avenir";
+  src: url("/fonts/AvenirLTStd-Roman.otf");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "avenir", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.top-trie {
+  position: absolute;
+  background-color: white;
+}
+
+.top-trie::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%) rotate(180deg);
+  left: calc(50% - 10px);
+  background: white;
+  width: 30px;
+  height: 20px;
+
+  /* The points are: (left top: x y, right top: x y, center bottom: x y) */
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
