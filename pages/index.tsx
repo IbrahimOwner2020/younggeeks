@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Layout from '../components/Layout/Layout'
+import Platform from '../components/LpPage/Platform'
 
 const Home: NextPage = () => {
     return (
@@ -13,7 +14,7 @@ const Home: NextPage = () => {
 
             <main>
                 <Layout>
-                    testing
+                    <Platform />
                 </Layout>
             </main>
         </div>

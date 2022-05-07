@@ -50,7 +50,7 @@ const Footer = () => {
                                     {nav.title}
                                     <div className="absolute top-0 right-0 -translate-y-1/4 h-[32px] w-[34px] bg-[#007AFF0F] rounded-tl-md rounded-tr-2xl rounded-bl-md rounded-br-md translate-x-1/2">{' '}</div>
                                 </h3>
-                                <div className='grid grid-cols-2 xs:grid-cols-3 gap-4 sm:flex sm:flex-col sm:items-start sm:space-y-6'>
+                                <div className='grid grid-cols-2 xs:grid-cols-3 gap-4 sm:flex sm:flex-col sm:items-start sm:space-y-2'>
                                     {nav.links.map((link, index) => (
                                         <Link key={index} href={link.href} passHref>
                                             <a className='text-blackPrimary2 text-sm lg:text-base'>
